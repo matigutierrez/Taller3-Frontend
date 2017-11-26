@@ -1,0 +1,72 @@
+<div layout-padding>
+  <div flex="40" flex-offset="30" flex-md="60" flex-offset-md="20" flex-sm="70" flex-offset-sm="15" flex-xs="90" flex-offset-xs="5">
+    <div layout-padding flex layout="column">
+      <div layout-xs="column" layout-xs="column" layout="row" layout-align="center center">
+        <div>
+          <h2>Ingresar Noticia</h2>
+        </div>
+      </div>
+      <div layout-xs="column">
+        <div flex>
+          <md-input-container md-no-float class="md-block">
+            <label>Titular</label>
+            <input ng-model="vm.noticia.titular" type="text">
+          </md-input-container>
+        </div>
+      </div>
+      <div layout-xs="column">
+        <div flex>
+          <md-input-container md-no-float class="md-block">
+            <label>Entrada</label>
+            <input ng-model="vm.noticia.entrada" type="text">
+          </md-input-container>
+        </div>
+      </div>
+      <div layout-xs="column">
+        <div flex>
+          <md-input-container md-no-float class="md-block">
+            <label>Cuerpo</label>
+            <input ng-model="vm.noticia.cuerpo" type="text">
+          </md-input-container>
+        </div>
+      </div>
+      <div layout-xs="column">
+        <div flex>
+          <md-input-container md-no-float class="md-block">
+            <label>Imagen</label>
+            <input ng-model="vm.noticia.imagen" type="text">
+          </md-input-container>
+        </div>
+      </div>
+      <div layout-xs="column">
+        <div flex>
+          <md-input-container md-no-float class="md-block">
+            <label>Fecha</label>
+            <input ng-model="vm.noticia.fecha" type="text">
+          </md-input-container>
+        </div>
+      </div>
+      <div layout-xs="column">
+        <div flex>
+          <md-input-container md-no-float class="md-block">
+            <label>Usuario</label>
+            <input ng-model="vm.noticia.usuario_id" type="text">
+          </md-input-container>
+        </div>
+      </div>
+      <div layout-xs="column">
+        <div flex>
+          <md-input-container md-no-float class="md-block">
+            <label>Categoria</label>
+            <input ng-model="vm.noticia.categoria_id" type="text">
+          </md-input-container>
+        </div>
+      </div>
+      <div flex layout-xs="column">
+        <center>
+          <md-button class="md-raised" md-colors="{background: 'Red'}" layout-fill style="min-height: 50px;" ng-click="vm.crearnoticia(vm.noticia)">Crear Noticia</md-button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,15 +18,10 @@
         {{ noticia.cuerpo }}
       </p>
     </md-card-content>
-    <md-card-actions layout="row" layout-align="end center">
-      <md-button ng-click="vm.vernoticia($index)">Ver Noticia</md-button>
-      <md-button ng-click="vm.eliminarnoticia(noticia.id)">Eliminar Noticia</md-button>
-    </md-card-actions>
+    <div layout="row">
+    	<div layout-padding layout-align="start start">
+    		<p>Autor: {{noticia.usuario.nombre}}</p>
+    	</div>
+  	</div>
   </md-card>
-</div>
-
-<div layout="row" layout-align="end end">
-	<md-button class="md-fab" ng-click="vm.cambio()">
-	  <md-icon md-svg-src="/assets/img/anadir.svg"></md-icon>
-	</md-button>
 </div>

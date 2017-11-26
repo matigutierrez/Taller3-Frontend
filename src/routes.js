@@ -11,7 +11,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $ht
   $stateProvider
   .state('app', {
     url: '/',
-    template: '<h1>Netflix AngularJS</h1>'
+    component: 'principal',
+    isPrivate: false
   })
   .state('login', {
     url: '/login',
@@ -21,6 +22,16 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $ht
   .state('noticia', {
     url: '/noticia',
     component: 'noticias',
+    isPrivate: true
+  })
+  .state('registronoticia', {
+    url: '/registronoticia',
+    component: 'registronoticia',
+    isPrivate: true
+  })
+  .state('vernoticia', {
+    url: '/vernoticia',
+    component: 'vernoticia',
     isPrivate: true
   });
 
