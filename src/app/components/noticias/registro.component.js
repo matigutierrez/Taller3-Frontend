@@ -9,17 +9,22 @@
     controllerAs: 'vm'
   });
 
-  registronoticiaCtr.$inject = ['NoticiaService', '$state', '$rootScope'];
+  registronoticiaCtr.$inject = ['NoticiaService', 'CategoriaService', '$state', '$rootScope'];
 
-  function registronoticiaCtr(NoticiaService, $state) {
+  function registronoticiaCtr(NoticiaService, CategoriaService, $state) {
 
     var vm = this;
+
+    CategoriaService.query().$promise.then(function(data){
+      console.log(data);
+      vm.categorias = data;
+    });
 
     vm.crearnoticia = function(noticia) {
 
       NoticiaService.save(noticia);
 
-      $state.go('registronoticia');
+      $state.go('noticia');
 
     }
 

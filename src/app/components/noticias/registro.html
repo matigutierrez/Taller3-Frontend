@@ -56,10 +56,12 @@
       </div>
       <div layout-xs="column">
         <div flex>
-          <md-input-container md-no-float class="md-block">
-            <label>Categoria</label>
-            <input ng-model="vm.noticia.categoria_id" type="text">
-          </md-input-container>
+          <label>Categoria</label>
+          <md-select ng-model="vm.noticia.categoria_id">
+            <md-option ng-repeat="categoria in vm.categorias" value="{{categoria.id}}">
+              {{categoria.descripcion}}
+            </md-option>
+          </md-select>
         </div>
       </div>
       <div flex layout-xs="column">
