@@ -17,10 +17,14 @@
       <p>
         {{ noticia.cuerpo }}
       </p>
-      <p>Genero: {{ noticia.categoria.descripcion }}</p>
     </md-card-content>
-    <div layout="row">
-    	<div layout-padding layout-align="start start">
+    <div layout="row" layout-align="end end">
+      <div layout-padding>
+        <p>
+          Genero: {{ noticia.categoria.descripcion }}
+        </p>
+      </div>
+    	<div layout-padding>
     		<p>Autor: {{noticia.usuario.nombre}}</p>
     	</div>
   	</div>

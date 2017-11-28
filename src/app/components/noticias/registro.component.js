@@ -21,6 +21,6 @@
     vm.crearnoticia = function (noticia) {
       NoticiaService.save(noticia);
       $state.go('noticia');
-    }
+    };
   }
 })();

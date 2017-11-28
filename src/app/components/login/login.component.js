@@ -23,7 +23,7 @@
         CredentialsService.setUser(data.email);
         $rootScope.$emit('isLogin');
         $state.go('noticia');
-      }, function (error) {
+      }, function () {
         vm.loginError = true;
       });
     };

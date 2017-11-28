@@ -21,16 +21,16 @@
 
     vm.cambio = function () {
       $state.go('registronoticia');
-    }
+    };
 
     vm.vernoticia = function (index) {
       var data = vm.noticia[index];
       $rootScope.$broadcast('datos', data);
       $state.go('vernoticia');
-    }
+    };
 
     vm.eliminarnoticia = function (id) {
       NoticiaService.delete({id: id});
-    }
+    };
   }
 })();
