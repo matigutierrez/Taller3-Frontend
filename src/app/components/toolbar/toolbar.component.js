@@ -21,7 +21,7 @@
       vm.isLogged = false;
       $state.go('login');
     };
-    
+
     $rootScope.$on('isLogin', function () {
       vm.isLogged = true;
     });

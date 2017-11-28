@@ -12,21 +12,15 @@
   registronoticiaCtr.$inject = ['NoticiaService', 'CategoriaService', '$state', '$rootScope'];
 
   function registronoticiaCtr(NoticiaService, CategoriaService, $state) {
-
     var vm = this;
 
-    CategoriaService.query().$promise.then(function(data){
-      console.log(data);
+    CategoriaService.query().$promise.then(function (data) {
       vm.categorias = data;
     });
 
-    vm.crearnoticia = function(noticia) {
-
+    vm.crearnoticia = function (noticia) {
       NoticiaService.save(noticia);
-
       $state.go('noticia');
-
     }
-
   }
 })();

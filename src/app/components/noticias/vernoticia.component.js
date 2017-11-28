@@ -11,23 +11,21 @@
 
   vernoticiaCtr.$inject = ['$state', '$rootScope'];
 
-  var dato = { 
-      titular: '',
-      entrada: '',
-      cuerpo: '',
-      imagen: '',
-      fecha: '',
-      usuario_id: 0,
-      categoria_id: 0
-    };
+  var dato = {
+    titular: '',
+    entrada: '',
+    cuerpo: '',
+    imagen: '',
+    fecha: '',
+    usuario_id: 0,
+    categoria_id: 0
+  };
 
   function vernoticiaCtr($rootScope, $scope) {
-
     var vm = this;
 
-    $scope.$on('datos', function($event, data) {
+    $scope.$on('datos', function ($event, data) {
       dato = data;
-      console.log(vm.dato);
     });
 
     vm.titular = dato.titular;
@@ -35,6 +33,5 @@
     vm.entrada = dato.entrada;
     vm.cuerpo = dato.cuerpo;
     vm.fecha = dato.fecha;
-
   }
 })();

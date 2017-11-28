@@ -1,32 +1,32 @@
-<div layout="row" layout-align="center start">
-  <h1>Noticias</h1>
-</div>
-
-<div layout layout-wrap>
- <md-card flex="30" flex-xs="100" ng-repeat="noticia in vm.noticia">
-    <img ng-src="{{noticia.imagen}}" class="md-card-image">
-    <md-card-title>
-      <md-card-title-text>
-        <span class="md-headline">{{ noticia.titular }}</span>
-      </md-card-title-text>
-    </md-card-title>
-    <md-card-content>
-      <p>
-        {{ noticia.entrada }}
-      </p>
-      <p>
-        {{ noticia.cuerpo }}
-      </p>
-    </md-card-content>
-    <md-card-actions layout="row" layout-align="end center">
-      <md-button ng-click="vm.vernoticia($index)">Ver Noticia</md-button>
-      <md-button ng-click="vm.eliminarnoticia(noticia.id)">Eliminar Noticia</md-button>
-    </md-card-actions>
-  </md-card>
-</div>
-
-<div layout="row" layout-align="end end">
-	<md-button class="md-fab" ng-click="vm.cambio()">
-	  <md-icon md-svg-src="/assets/img/anadir.svg"></md-icon>
-	</md-button>
+<div layout-padding>
+  <div layout="row" layout-align="center start">
+    <h1>Noticias</h1>
+  </div>
+  <div layout="row">
+   <md-card flex="30" flex-xs="100" ng-repeat="noticia in vm.noticia">
+      <img ng-src="{{noticia.imagen}}" class="md-card-image">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{ noticia.titular }}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <p>
+          {{ noticia.entrada }}
+        </p>
+        <p>
+          {{ noticia.cuerpo }}
+        </p>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button ng-click="vm.vernoticia($index)">Ver Noticia</md-button>
+        <md-button ng-click="vm.eliminarnoticia(noticia.id)">Eliminar Noticia</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <div layout="row" layout-align="end end">
+    <md-button class="md-fab" ng-click="vm.cambio()">
+      <md-icon md-svg-src="/assets/img/anadir.svg"></md-icon>
+    </md-button>
+  </div>
 </div>
