@@ -11,15 +11,7 @@
 
   vernoticiaCtr.$inject = ['$state', '$rootScope'];
 
-  var dato = {
-    titular: '',
-    entrada: '',
-    cuerpo: '',
-    imagen: '',
-    fecha: '',
-    usuario_id: 0,
-    categoria_id: 0
-  };
+  var dato = {};
 
   function vernoticiaCtr($rootScope, $scope) {
     var vm = this;

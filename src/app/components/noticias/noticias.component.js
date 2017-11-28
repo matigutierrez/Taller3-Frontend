@@ -31,6 +31,9 @@
 
     vm.eliminarnoticia = function (id) {
       NoticiaService.delete({id: id});
+      NoticiaService.query().$promise.then(function (data) {
+        vm.noticia = data;
+      });
     };
   }
 })();
