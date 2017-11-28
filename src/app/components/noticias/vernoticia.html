@@ -3,14 +3,8 @@
     <div layout="row" flex layout-align="center center">
       <h1>{{vm.titular}}</h1>
     </div>
-    <div layout-padding layout-align="center start" layout="row" layout-xs="column" layout-sm="column" layout-align-sm="center center" layout-align-xs="center center" layout-align-md="center center" layout-align-sm="center center">
-      <div layout-padding>
-        <img ng-src="{{vm.imagen}}"></img>
-        <div flex layout="row">
-          <md-button style="width:100%">
-          </md-button>
-        </div>
-      </div>
+    <div layout-padding layout-align="center start" layout="row" layout-xs="column" layout-sm="column">
+      <img flex=40 flex-xs="100" flex-sm="100" ng-src="{{vm.imagen}}" class="md-card-image"></img>
       <div flex>
         <h2>{{vm.entrada}}</h2>
         <p>{{vm.cuerpo}}</p>

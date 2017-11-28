@@ -1,9 +1,9 @@
-<div layout="row" layout-align="center start">
+<div layout="row" layout-align="center center">
   <h1>Noticias</h1>
 </div>
 
-<div layout layout-wrap>
- <md-card flex="30" flex-xs="100" ng-repeat="noticia in vm.noticia">
+<div layout="row" layout-xs="column">
+ <md-card flex="50" flex-xs="100" ng-repeat="noticia in vm.noticia">
     <img ng-src="{{noticia.imagen}}" class="md-card-image">
     <md-card-title>
       <md-card-title-text>
