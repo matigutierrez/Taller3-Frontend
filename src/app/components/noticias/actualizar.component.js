@@ -13,7 +13,7 @@
 
   var noticiaid = 0;
 
-  function actualizarnoticiaCtr(NoticiaService, CategoriaService, $state ,$scope) {
+  function actualizarnoticiaCtr(NoticiaService, CategoriaService, $state, $scope) {
     var vm = this;
 
     CategoriaService.query().$promise.then(function (data) {
@@ -21,14 +21,13 @@
     });
 
     $scope.$on('id', function ($event, data) {
-      noticiaid = data; 
-      console.log(data);   
+      noticiaid = data;
     });
 
     vm.actualizarnoticia = function (noticia) {
       NoticiaService.update({id: noticiaid}, noticia, function () {
-          $state.go('noticia');
-        }, function () {});
+        $state.go('noticia');
+      }, function () {});
     };
   }
 })();

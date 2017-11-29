@@ -16,6 +16,7 @@
   function vernoticiaCtr($rootScope, $scope) {
     var vm = this;
 
+    /* por alguna razon no me funciona el vm dentro del evento */
     $scope.$on('datos', function ($event, data) {
       dato = data;
     });

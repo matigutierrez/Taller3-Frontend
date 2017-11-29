@@ -9,9 +9,9 @@
 
   function noticiaService($resource, API) {
     return $resource(API + 'noticia/:id', {id: '@id'}, {
-        update: {
-            method: 'PUT'
-        }
+      update: {
+        method: 'PUT'
+      }
     });
   }
 })();
