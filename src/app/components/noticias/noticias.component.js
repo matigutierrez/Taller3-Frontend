@@ -23,6 +23,11 @@
       $state.go('registronoticia');
     };
 
+    vm.actualizar = function (id) {
+      $rootScope.$broadcast('id', id);
+      $state.go('actualizarnoticia');
+    };
+
     vm.vernoticia = function (index) {
       var data = vm.noticia[index];
       $rootScope.$broadcast('datos', data);

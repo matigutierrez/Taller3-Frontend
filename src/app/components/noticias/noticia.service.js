@@ -8,7 +8,11 @@
   noticiaService.$inject = ['$resource', 'API'];
 
   function noticiaService($resource, API) {
-    return $resource(API + 'noticia/:id', {id: '@id'});
+    return $resource(API + 'noticia/:id', {id: '@id'}, {
+        update: {
+            method: 'PUT'
+        }
+    });
   }
 })();
 

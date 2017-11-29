@@ -33,6 +33,11 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $ht
     url: '/vernoticia',
     component: 'vernoticia',
     isPrivate: true
+  })
+  .state('actualizarnoticia', {
+    url: '/actualizarnoticia',
+    component: 'actualizarnoticia',
+    isPrivate: true
   });
 
   $httpProvider.interceptors.push('InterceptorApi');
